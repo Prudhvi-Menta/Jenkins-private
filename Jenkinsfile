@@ -1,5 +1,9 @@
 pipeline {
-    agent Agent-1
+    agent {
+    node {
+        label 'jenkins-agent'
+    }
+}
     stages {
         stage('Build') {
             steps {
