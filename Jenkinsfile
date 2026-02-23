@@ -25,7 +25,7 @@ pipeline {
     post{
         always{
             echo "I will execute in post section."
-            #cleanWs()
+            // cleanWs()
         }
         success{
             echo "I will execute if pipeline succeded."
