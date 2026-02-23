@@ -58,7 +58,7 @@ pipeline {
         }
         aborted{
             echo "This pipeline is aborted"
-            echo "$JOB_BASE_NAME, $BUILD_NUMBER has failed against $GIT_COMMIT"
+            echo "Job name is $JOB_BASE_NAME, Build id is $BUILD_NUMBER has failed against $GIT_COMMIT"
         }
     }
 }
