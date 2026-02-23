@@ -4,12 +4,16 @@ pipeline {
             label 'jenkins-agent'
         }
     }
+    environment{
+        Course="Jenkins"
+    }
     stages {
         stage('Build') {
             steps {
                 script{
                     sh """
                         echo "This is Build stage"
+                        echo $Course
                     """
                 }
             }
@@ -19,6 +23,7 @@ pipeline {
                 script{
                     sh """
                         echo "This is Test stage"
+                        echo $Course
                     """
                 }
             }
@@ -28,6 +33,7 @@ pipeline {
                  script{
                     sh """
                         echo "This is Deploy stage"
+                        echo $Course
                     """
                 }
             }
