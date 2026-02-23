@@ -56,5 +56,9 @@ pipeline {
         failure{
             echo "I will execute if pipeline failed."
         }
+        aborted{
+            echo "This pipeline is aborted"
+            echo "$JOB_BASE_NAME, $BUILD_NUMBER has failed against $GIT_COMMIT"
+        }
     }
 }
