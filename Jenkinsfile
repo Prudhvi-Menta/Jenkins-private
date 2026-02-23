@@ -19,7 +19,7 @@ pipeline {
                         echo "This is Build stage"
                         echo $Course
                         env
-                        // sleep 12
+                        #sleep 12
                     """
                 }
             }
